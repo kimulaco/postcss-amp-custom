@@ -1,0 +1,33 @@
+{
+  "name": "postcss-amp-custom",
+  "version": "0.9.0",
+  "author": "kmrk",
+  "license": "MIT",
+  "description": "PostCSS plugin to optimize CSS source for AMP HTML.",
+  "keywords": [
+    "css",
+    "AMP",
+    "AMP HTML",
+    "Accelerated Mobile Pages",
+    "PostCSS"
+  ],
+  "homepage": "https://github.com/kmrk/postcss-amp-custom",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kmrk/postcss-amp-custom"
+  },
+  "main": "postcsss-amp-custom.js",
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "scripts": {
+    "test": "postcss __test__/src --dir __test__/dist"
+  },
+  "dependencies": {
+    "amp-custom": "^1.0.0",
+    "postcss": "^6.0.22"
+  },
+  "devDependencies": {
+    "postcss-cli": "^5.0.0"
+  }
+}
