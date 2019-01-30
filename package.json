@@ -1,6 +1,6 @@
 {
   "name": "postcss-amp-custom",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "author": "kmrk",
   "license": "MIT",
   "description": "PostCSS plugin to optimize CSS source for AMP HTML.",
@@ -24,7 +24,7 @@
     "test": "postcss __test__/src --dir __test__/dist"
   },
   "dependencies": {
-    "amp-custom": "^1.0.1",
+    "amp-custom": "^1.1.0",
     "postcss": "^6.0.22"
   },
   "devDependencies": {

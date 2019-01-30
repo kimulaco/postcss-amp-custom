@@ -4,7 +4,7 @@ PostCSS plugin to optimize CSS source for AMP HTML.
 
 ## Install
 
-```
+```shell
 npm install --save-dev postcss-amp-custom
 ```
 
