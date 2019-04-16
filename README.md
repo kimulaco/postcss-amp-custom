@@ -1,5 +1,7 @@
 # postcss-amp-custom
 
+[![npm version](https://badge.fury.io/js/postcss-amp-custom.svg)](https://badge.fury.io/js/postcss-amp-custom)
+
 PostCSS plugin to optimize CSS source for AMP HTML.
 
 ## Install
@@ -64,4 +66,4 @@ body{font-size:16px}a{color:#39c;text-decoration:none}
 
 ## License
 
-[MIT License](https://github.com/kmrk/postcss-amp-custom/blob/master/LICENSE).
+[MIT License](https://github.com/kimulaco/postcss-amp-custom/blob/master/LICENSE).
