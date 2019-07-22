@@ -24,10 +24,10 @@
     "test": "postcss __test__/src --dir __test__/dist"
   },
   "dependencies": {
-    "amp-custom": "^1.2.2",
+    "amp-custom": "^1.2.3",
     "postcss": "^7.0.17"
   },
   "devDependencies": {
-    "postcss-cli": "^6.1.2"
+    "postcss-cli": "^6.1.3"
   }
 }
