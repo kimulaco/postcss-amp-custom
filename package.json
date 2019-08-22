@@ -24,7 +24,7 @@
     "test": "postcss __test__/src --dir __test__/dist"
   },
   "dependencies": {
-    "amp-custom": "^1.2.3",
+    "amp-custom": "^1.2.4",
     "postcss": "^7.0.17"
   },
   "devDependencies": {
