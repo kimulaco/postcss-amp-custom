@@ -1,7 +1,7 @@
 module.exports = () => ({
-    plugins: [
-        require('./postcss-amp-custom')({
-            enableByteLimit: true
-        })
-    ]
-});
+  plugins: [
+    require('./postcss-amp-custom')({
+      enableByteLimit: true
+    })
+  ]
+})
