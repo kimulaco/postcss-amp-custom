@@ -1,6 +1,6 @@
 {
   "name": "postcss-amp-custom",
-  "version": "1.2.4",
+  "version": "1.2.6",
   "author": "kimulaco",
   "license": "MIT",
   "description": "PostCSS plugin to optimize CSS source for AMP HTML.",
@@ -21,13 +21,22 @@
     "node": ">=6.0.0"
   },
   "scripts": {
-    "test": "postcss __test__/src --dir __test__/dist"
+    "lint": "eslint **/*.js -c .eslintrc.js",
+    "test": "jest --silent --verbose"
   },
   "dependencies": {
-    "amp-custom": "^1.2.4",
-    "postcss": "^7.0.17"
+    "amp-custom": "^1.2.6",
+    "postcss": "^7.0.18"
   },
   "devDependencies": {
+    "del-cli": "^3.0.0",
+    "eslint": "^6.5.1",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "jest": "^24.9.0",
     "postcss-cli": "^6.1.3"
   }
 }
