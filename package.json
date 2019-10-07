@@ -22,7 +22,7 @@
   },
   "scripts": {
     "lint": "eslint **/*.js -c .eslintrc.js",
-    "test": "postcss __test__/src --dir __test__/dist"
+    "test": "jest --silent --verbose"
   },
   "dependencies": {
     "amp-custom": "^1.2.6",
