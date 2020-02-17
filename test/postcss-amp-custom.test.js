@@ -6,7 +6,7 @@ const readFile = util.promisify(fs.readFile)
 
 const OUTPUT_CSS_PATH = 'test/dist/test.css'
 
-describe('gulp-amp-custom', () => {
+describe('postcss-amp-custom', () => {
   beforeAll(async () => {
     await exec(`npx del-cli ${OUTPUT_CSS_PATH}`)
     await exec('cd test && npx postcss src/test.css -o dist/test.css')
