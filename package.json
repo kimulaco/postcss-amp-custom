@@ -1,6 +1,6 @@
 {
   "name": "postcss-amp-custom",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "author": "kimulaco",
   "license": "MIT",
   "description": "PostCSS plugin to optimize CSS source for AMP HTML.",
@@ -16,7 +16,7 @@
     "type": "git",
     "url": "https://github.com/kimulaco/postcss-amp-custom"
   },
-  "main": "postcsss-amp-custom.js",
+  "main": "postcss-amp-custom.js",
   "engines": {
     "node": ">=6.0.0"
   },
