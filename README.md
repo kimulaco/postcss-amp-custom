@@ -66,7 +66,7 @@ body{font-size:16px}a{color:#39c;text-decoration:none}
 
 ## Options
 
-- enableByteLimit `Boolean` - If the CSS source exceeds 50 KB, it issues an error.(Default: `false`)
+- enableByteLimit `Boolean` - If the CSS source exceeds 75KB, it issues an error.(Default: `false`)
 
 ## Plugins
 
