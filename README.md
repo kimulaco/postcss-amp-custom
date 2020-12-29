@@ -2,7 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 [![npm version](https://badge.fury.io/js/postcss-amp-custom.svg)](https://badge.fury.io/js/postcss-amp-custom)
-[![Build Status](https://travis-ci.org/kimulaco/postcss-amp-custom.svg?branch=master)](https://travis-ci.org/kimulaco/postcss-amp-custom)
+[![Build Status](https://github.com/kimulaco/postcss-amp-custom/workflows/Test/badge.svg)](https://github.com/kimulaco/postcss-amp-custom/actions)
 
 PostCSS plugin to optimize CSS source for AMP HTML.
 
@@ -19,12 +19,12 @@ npm install --save-dev postcss-amp-custom
 ```js
 // postcss.config.js
 module.exports = () => ({
-    plugins: [
-        require('postcss-amp-custom')({
-            enableByteLimit: true
-        })
-    ]
-});
+  plugins: [
+    require('postcss-amp-custom')({
+      enableByteLimit: true
+    })
+  ]
+})
 ```
 
 ```css

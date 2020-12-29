@@ -1,0 +1,10 @@
+{
+  "name": "postcss-amp-custom-test-postcss-v8",
+  "scripts": {
+    "build": "postcss src/test.css -o dist/test.css"
+  },
+  "devDependencies": {
+    "postcss": "^7.0.35",
+    "postcss-cli": "^7.1.2"
+  }
+}

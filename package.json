@@ -16,7 +16,7 @@
     "type": "git",
     "url": "https://github.com/kimulaco/postcss-amp-custom"
   },
-  "main": "postcss-amp-custom.js",
+  "main": "index.js",
   "engines": {
     "node": ">=10.0.0"
   },

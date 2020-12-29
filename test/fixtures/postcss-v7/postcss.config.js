@@ -1,6 +1,8 @@
+const ampCustom = require('../../../index')
+
 module.exports = () => ({
   plugins: [
-    require('../postcss-amp-custom')({
+    ampCustom({
       enableByteLimit: true
     })
   ]
