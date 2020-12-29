@@ -2,6 +2,7 @@ const fs = require('fs').promises
 const path = require('path')
 const postcss = require('postcss')
 const postcssAmpCustom = require('../../../index')
+const { RESULT_CSS } = require('../../util')
 const pkg = require('./package.json')
 const postcssVersion = pkg.devDependencies.postcss.slice(1)
 
@@ -23,6 +24,6 @@ describe('postcss-amp-custom', () => {
   })
 
   test('process', () => {
-    expect(typeof result.css).toBe('string')
+    expect(result.css).toBe(RESULT_CSS)
   })
 })

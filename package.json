@@ -22,7 +22,7 @@
   },
   "scripts": {
     "lint": "eslint **/*.js -c .eslintrc.js",
-    "test": "jest --silent --verbose"
+    "test": "jest --verbose"
   },
   "dependencies": {
     "amp-custom": "^1.3.0"
