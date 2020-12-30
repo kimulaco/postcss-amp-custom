@@ -4,9 +4,11 @@
 [![npm version](https://badge.fury.io/js/postcss-amp-custom.svg)](https://badge.fury.io/js/postcss-amp-custom)
 [![Build Status](https://github.com/kimulaco/postcss-amp-custom/workflows/Test/badge.svg)](https://github.com/kimulaco/postcss-amp-custom/actions)
 
-PostCSS plugin to optimize CSS source for AMP HTML.
+PostCSS plugin to optimize CSS source for AMP HTML. Removes styles that are prohibited by AMP HTML.
 
-[amp-custom](https://github.com/kimulaco/amp-custom) is the core library.
+Supports PostCSS v7 and v8.
+
+[amp-custom](https://github.com/kimulaco/amp-custom) is the core library. However, [amp-custom](https://github.com/kimulaco/amp-custom) will be deprecated in the future, and postcss-amp-custom will be mainly developed.
 
 ## Install
 
@@ -18,9 +20,11 @@ npm install --save-dev postcss-amp-custom
 
 ```js
 // postcss.config.js
+const postcssAmpCustom = require('postcss-amp-custom')
+
 module.exports = () => ({
   plugins: [
-    require('postcss-amp-custom')({
+    postcssAmpCustom({
       enableByteLimit: true
     })
   ]
@@ -67,11 +71,6 @@ body{font-size:16px}a{color:#39c;text-decoration:none}
 ## Options
 
 - enableByteLimit `Boolean` - If the CSS source exceeds 75KB, it issues an error.(Default: `false`)
-
-## Plugins
-
-- [amp-custom](https://github.com/kimulaco/amp-custom)
-- [gulp-amp-custom](https://github.com/kimulaco/gulp-amp-custom)
 
 ## License
 

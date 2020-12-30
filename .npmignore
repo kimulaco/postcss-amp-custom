@@ -1,4 +1,8 @@
 .DS_Store
-.node-version
 npm-debug.log
 node_modules
+.github
+test
+.editorconfig
+.eslintrc.js
+.eslintignore
