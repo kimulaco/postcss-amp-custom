@@ -1,6 +1,6 @@
 {
   "name": "postcss-amp-custom",
-  "version": "1.4.0-alpha.4",
+  "version": "1.4.0-alpha.5",
   "author": "kimulaco",
   "license": "MIT",
   "description": "PostCSS plugin to optimize CSS source for AMP HTML.",
