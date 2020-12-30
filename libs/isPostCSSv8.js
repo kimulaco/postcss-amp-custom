@@ -1,5 +1,5 @@
 const isPostCSSv8 = (postcss) => {
-  return postcss.Root !== 'undefined'
+  return typeof postcss.Root !== 'undefined'
 }
 
 module.exports = isPostCSSv8
