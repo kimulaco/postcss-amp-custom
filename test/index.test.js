@@ -3,21 +3,19 @@ const path = require('path')
 const postcss = require('postcss')
 const postcssAmpCustom = require('../index')
 const { RESULT_CSS } = require('./util')
+const INPUT_CSS = path.join(__dirname, 'src/test.css')
 
 describe('postcss-amp-custom', () => {
-  let result
+  let inputCss
 
   beforeAll(async () => {
-    const inputCss = await fs.readFile(path.join(__dirname, 'src/test.css'))
-
-    result = await postcss([postcssAmpCustom])
-      .process(inputCss, {
-        from: 'src/app.css',
-        to: 'dest/app.css'
-      })
+    inputCss = await fs.readFile(INPUT_CSS)
   })
 
-  test('process', () => {
+  test('process', async () => {
+    const result = await postcss([postcssAmpCustom]).process(inputCss, {
+      from: INPUT_CSS
+    })
     expect(result.css).toBe(RESULT_CSS)
   })
 })
