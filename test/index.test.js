@@ -1,10 +1,8 @@
 const fs = require('fs').promises
 const path = require('path')
 const postcss = require('postcss')
-const postcssAmpCustom = require('../../../index')
-const { RESULT_CSS } = require('../../util')
-const pkg = require('./package.json')
-const postcssVersion = pkg.devDependencies.postcss.slice(1)
+const postcssAmpCustom = require('../index')
+const { RESULT_CSS } = require('./util')
 
 describe('postcss-amp-custom', () => {
   let result
@@ -17,10 +15,6 @@ describe('postcss-amp-custom', () => {
         from: 'src/app.css',
         to: 'dest/app.css'
       })
-  })
-
-  test(`PostCSS version ${postcssVersion}`, () => {
-    expect(result.processor.version).toBe(postcssVersion)
   })
 
   test('process', () => {

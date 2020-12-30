@@ -1,27 +1,36 @@
 const postcss = require('postcss')
-const AmpCustom = require('amp-custom')
+const compileAmpCustom = require('./libs/compileAmpCustom')
+const isPostCSSv8 = require('./libs/isPostCSSv8')
+const PLUGIN_NAME = 'postcss-amp-custom'
 
-module.exports = postcss.plugin('postcss-amp-custom', (option) => {
-  const ampCustom = new AmpCustom()
-
+module.exports = (option = {}) => {
   option = Object.assign({
     enableByteLimit: false
-  }, option)
+  }, option || {})
 
-  return (root, result) => {
-    return new Promise((resolve, reject) => {
-      const style = ampCustom.optimize(root.toString())
-
-      if (
-        option.enableByteLimit &&
-        ampCustom.isOverMaxByte(style)
-      ) {
-        return reject(new Error('AMP stylesheet exceeds the 50,000 btyes limit.'))
+  if (isPostCSSv8(postcss)) {
+    return {
+      postcssPlugin: PLUGIN_NAME,
+      Root (root, postcss) {
+        postcss.result.root = compileAmpCustom(root, postcss, option)
       }
-
-      result.root = postcss.parse(style)
-
-      resolve()
+    }
+  } else {
+    return postcss.plugin(PLUGIN_NAME, (option) => {
+      return (root, result) => {
+        return new Promise((resolve, reject) => {
+          try {
+            const postcss = require('postcss')
+            const style = compileAmpCustom(root, postcss, option)
+            result.root = postcss.parse(style)
+            resolve()
+          } catch (error) {
+            reject(error)
+          }
+        })
+      }
     })
   }
-})
+}
+
+module.exports.postcss = true
